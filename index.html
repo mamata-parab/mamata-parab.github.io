@@ -240,6 +240,91 @@
     #expertise .light-eyebrow { color:#efabdc; }
     .capability,.credential { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.23); }
     .capability p,.credential span { color:#e2d4ea; }
+    /* Executive portfolio: restrained color, clear hierarchy, measured outcomes. */
+    :root { --ink:#222633; --muted:#666778; --line:#d2cbd8; --paper:#e8e5eb; --surface:#efecf1; --violet:#76607d; --violet-dark:#4b365b; --navy:#202434; --orchid:#b98baa; }
+    body { background:#e8e5eb; color:#222633; }
+    h1,h2,h3 { letter-spacing:-.035em; }
+    .topbar { background:rgba(235,232,238,.96); border-color:#d6d0dc; }
+    .brand-mark { background:#39344e; border-radius:4px; }
+    .nav a { color:#454554; }
+    .nav .nav-contact { border-color:#a9a0b2; border-radius:5px; color:#393449; }
+    .hero { background:linear-gradient(115deg,#202639,#2c3047 62%,#5b4966); background-size:100% 100%; animation:none; }
+    .hero::before { opacity:.1; mask-image:none; }
+    .hero::after { width:470px; height:470px; bottom:-300px; right:-100px; border-color:rgba(224,192,220,.3); border-radius:50%; box-shadow:0 0 0 60px rgba(208,166,211,.025); animation:none; }
+    .hero-inner { min-height:530px; padding-block:75px 92px; }
+    h1 { font-size:clamp(3rem,5.2vw,4.8rem); max-width:700px; }
+    .hero .eyebrow { color:#c9a8ca; }
+    .hero-role,.hero-copy { color:#e0dce7; }
+    .button { border-radius:5px; }
+    .button-primary { background:#d7b5d3; color:#24243b; box-shadow:none; }
+    .portrait { width:min(100%,300px); }
+    .portrait::before { border-radius:50%; border-color:rgba(222,199,223,.55); box-shadow:none; animation:none; }
+    .portrait::after { border-color:rgba(222,199,223,.3); }
+    .portrait-placeholder { background:linear-gradient(145deg,#776987,#413d5b); font-size:4.2rem; box-shadow:0 15px 30px rgba(11,12,25,.22); animation:none; }
+    .orbit-chip,.orbit-spark { display:none; }
+    .intro-strip { background:#d9d2dc; border-color:#c8bfce; border-radius:6px; box-shadow:0 10px 28px rgba(28,22,43,.1); }
+    .intro-item strong { color:#40304e; }
+    .intro-item span { color:#4f4b5b; }
+    .work { background:linear-gradient(150deg,#252a3a,#242739); }
+    .work .light-eyebrow,.results .light-eyebrow { color:#d7b8d4; }
+    .work .section-note,.results .section-note { color:#c9c5d0; }
+    .project { background:#2c3042; border:1px solid #505065; border-radius:7px; box-shadow:none; }
+    .project:hover { box-shadow:0 14px 30px rgba(10,12,25,.17); transform:translateY(-3px); }
+    .project:has(details[open]) { box-shadow:0 10px 25px rgba(10,12,25,.15); filter:none; }
+    .project.featured { background:linear-gradient(105deg,#37344c,#49405f); border-color:#70647b; animation:none; }
+    .project-kicker,.featured .project-kicker { color:#d3b3d0; }
+    .project p,.featured p { color:#d8d7e1; }
+    .project-metric,.featured .project-metric { color:#e9d3e5; }
+    .project-visual,.project-visual.patent,.project-visual.vision,.project-visual.archive,.project-visual.defects { background:linear-gradient(120deg,#514563,#65516d); border-radius:6px 6px 0 0; }
+    .project-visual::before { display:none; }
+    .project .tag,.featured .tag { background:transparent; color:#eee4ee; border:1px solid #9f8ca8; border-radius:4px; box-shadow:none; font-size:.75rem; padding:5px 8px; }
+    .project:hover .tag,.featured:hover .tag { background:rgba(255,255,255,.08); }
+    .project summary,.featured summary { color:#e7c8df; }
+    .results { background:#302d40; }
+    .impact-ribbon { background:transparent; gap:0; border:0; border-top:1px solid #786e83; border-bottom:1px solid #786e83; border-radius:0; margin:32px 0 45px; }
+    .impact-ribbon div { background:transparent; padding:19px 18px; border-right:1px solid #655d70; }
+    .impact-ribbon div:last-child { border-right:0; }
+    .impact-ribbon strong { color:#e2c7de; font-size:clamp(1.6rem,2.7vw,2.4rem); }
+    .impact-ribbon span { color:#d2cdd8; }
+    .lab { border:1px solid #746b7d; border-radius:8px; background:#373348; box-shadow:none; }
+    .lab-label { color:#d8b9d3; }
+    .lab p { color:#d4cfdb; }
+    .lab-controls button { border-radius:4px; border-color:#94879b; }
+    .lab-controls button[aria-pressed="true"] { background:#d8bfd5; color:#252333; border-color:#d8bfd5; }
+    .lab-plot { background:#282739; border-color:#6b6375; border-radius:6px; }
+    .demo-badge { color:#ddd1df; background:transparent; border:1px solid #8f8096; border-radius:4px; }
+    .bar-row { grid-template-columns:70px 1fr 72px; margin:25px 0; }
+    .bar-track { height:12px; background:#494557; border-radius:2px; }
+    .bar-fill { background:linear-gradient(90deg,#8c779d,#ceb1cb); border-radius:2px; }
+    .lab-footnote { color:#bcb7c6!important; }
+    .journey { background:#d8d3dc; color:#252738; }
+    .journey .section-note { color:#525060; }
+    .journey .light-eyebrow { color:#64506b; }
+    .route { background:linear-gradient(135deg,#e3dee7,#d5cbd8); border:1px solid #c2b7c7; border-radius:7px; box-shadow:none; }
+    .route-road { filter:none; }
+    .road-edge { stroke:#b8a8bf; stroke-width:16; opacity:.8; }
+    .road-body { stroke:#66576f; stroke-width:6; }
+    .road-mid { display:none; }
+    .route-stop { color:#272735; text-shadow:none; }
+    .route-stop .pin { width:33px; height:33px; margin-bottom:12px; border-radius:50%; transform:none; background:#4d455e; border:2px solid #d5c3d7; box-shadow:none; }
+    .pin b { transform:none; font-size:.65rem; }
+    .route-stop .route-date { color:#6b556f; font-size:.67rem; }
+    .route-stop strong { color:#55445e; }
+    .route-stop p { font-weight:430; }
+    .route-caption { color:#766879; }
+    .about-band { background:linear-gradient(120deg,#c2b1c5,#d2c2d4); border:0; }
+    .about-layout p { color:#373747; }
+    .principles { align-self:stretch; padding:30px; border-top:2px solid #574a62; background:rgba(245,241,247,.36); }
+    .principles .lab-label { color:#654a69; }
+    .principles h3 { margin:10px 0 26px; font-size:1.5rem; }
+    .principles div { display:grid; grid-template-columns:36px 1fr; gap:12px; padding:16px 0; border-top:1px solid rgba(66,54,76,.23); }
+    .principles div span { color:#674f6e; font-size:.72rem; font-weight:800; }
+    .principles div p { margin:0; font-size:.86rem; line-height:1.5; }
+    #expertise { background:#242a3a; }
+    #expertise .light-eyebrow { color:#d5b8d1; }
+    .capability,.credential { border-radius:5px; background:rgba(255,255,255,.035); border-color:#5a5b6c; }
+    .contact { background:linear-gradient(115deg,#29273a,#464057); animation:none; }
+    footer { background:#1d2230; }
     @media (max-width:900px) { .hero-inner { gap:20px; grid-template-columns:minmax(0,1fr) minmax(240px,.6fr); } .capability-grid { grid-template-columns:repeat(2,1fr); } .about-layout { gap:30px; } .impact-ribbon { grid-template-columns:repeat(3,1fr); } }
     @media (max-width:680px) {
       .wrap { width:min(calc(100% - 36px),var(--max)); }
@@ -270,7 +355,7 @@
       .impact-ribbon { grid-template-columns:repeat(2,1fr); }
       .lab { grid-template-columns:1fr; padding:20px; }
       .lab-plot { padding:16px; }
-      .bar-row { grid-template-columns:100px 1fr 33px; gap:7px; font-size:.72rem; }
+      .bar-row { grid-template-columns:55px 1fr 66px; gap:7px; font-size:.72rem; }
       .route { min-height:890px; }
       .route-road { width:140px; left:-45px; }
       .route-stop,.route-stop:nth-of-type(1),.route-stop:nth-of-type(2),.route-stop:nth-of-type(3),.route-stop:nth-of-type(4),.route-stop:nth-of-type(5) { left:26%; right:auto; width:68%; }
@@ -314,7 +399,7 @@
           <div class="actions"><a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.linkedin.com/in/mamata-parab/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
           <div class="hero-foot"><span>Based in the United States</span><span>AI/ML in scientific and healthcare settings</span></div>
         </div>
-        <div class="portrait" role="img" aria-label="Monogram placeholder for Mamata Parab's portrait, surrounded by her AI work areas"><div class="portrait-placeholder">MP</div><span class="orbit-chip one">Generative AI</span><span class="orbit-chip two">Computer vision</span><span class="orbit-chip three">Data platforms</span><span class="orbit-spark a"></span><span class="orbit-spark b"></span><span class="orbit-spark c"></span></div>
+        <div class="portrait" role="img" aria-label="Monogram placeholder for Mamata Parab's portrait"><div class="portrait-placeholder">MP</div><span class="orbit-chip one">Generative AI</span><span class="orbit-chip two">Computer vision</span><span class="orbit-chip three">Data platforms</span><span class="orbit-spark a"></span><span class="orbit-spark b"></span><span class="orbit-spark c"></span></div>
       </div>
     </section>
     <div class="wrap intro-strip" aria-label="Selected impact">
@@ -349,7 +434,7 @@
     </section>
     <section class="section results" id="results" aria-labelledby="results-heading">
       <div class="wrap">
-        <div class="section-head"><div><span class="eyebrow light-eyebrow">Evidence in motion</span><h2 id="results-heading">What changed in the work.</h2></div><p class="section-note">Verified outcomes from different projects. Each measure describes its own workflow, so the figures are shown with context.</p></div>
+        <div class="section-head"><div><span class="eyebrow light-eyebrow">Measured impact</span><h2 id="results-heading">What changed in the work.</h2></div><p class="section-note">Verified outcomes from different projects. Each measure describes its own workflow, so the figures are shown with context.</p></div>
         <div class="impact-ribbon" aria-label="Verified project outcomes">
           <div><strong>60%</strong><span>less scientific data retrieval turnaround · NL2SQL</span></div>
           <div><strong>&gt;65%</strong><span>faster report processing · Document AI</span></div>
@@ -357,15 +442,15 @@
           <div><strong>67%</strong><span>less manual video review · RGS frame selection</span></div>
           <div><strong>57%</strong><span>lower storage costs · Structural biology archive</span></div>
         </div>
-        <div class="lab" aria-label="Interactive example chart using sample data">
-          <div><span class="lab-label">Interactive data sketch</span><h3>Explore a possible results view.</h3><p>Choose a project to see how a future case study could break performance down by task. These bars use example values and do not represent measured AbbVie outcomes.</p><div class="lab-controls" role="group" aria-label="Choose example project"><button type="button" data-view="query" aria-pressed="true">Data access</button><button type="button" data-view="document" aria-pressed="false">Document AI</button><button type="button" data-view="vision" aria-pressed="false">Computer vision</button></div></div>
-          <div class="lab-plot"><div class="plot-top"><strong id="plot-title">Sample query task mix</strong><span class="demo-badge">SAMPLE DATA</span></div><div id="plot-bars" role="img" aria-label="Illustrative sample chart"></div><p class="lab-footnote">Illustrative percentages for layout only. Replace with validated task-level results before presenting as evidence.</p></div>
+        <div class="lab" aria-label="Measured workflow timing comparison">
+          <div><span class="lab-label">Operational impact</span><h3>From bottleneck to repeatable workflow.</h3><p>Compare two documented changes in runtime. The chart keeps the units and baseline visible so the improvement is easy to interpret.</p><div class="lab-controls" role="group" aria-label="Choose workflow"><button type="button" data-view="archive" aria-pressed="true">Archive transfer</button><button type="button" data-view="pipeline" aria-pressed="false">Workflow migration</button></div></div>
+          <div class="lab-plot"><div class="plot-top"><strong id="plot-title">Transfer time per 10 experiments</strong><span class="demo-badge">MINUTES</span></div><div id="plot-bars" role="img" aria-label="Measured workflow timing comparison"></div><p class="lab-footnote" id="plot-note">Approx. 15 minutes before; 7–8 minutes after migration to the archive workflow.</p></div>
         </div>
       </div>
     </section>
     <section class="section journey" id="journey" aria-labelledby="journey-heading">
       <div class="wrap">
-        <div class="section-head"><div><span class="eyebrow light-eyebrow">The journey</span><h2 id="journey-heading">The road to applied AI.</h2></div><p class="section-note">A winding path through biomedical engineering, healthcare data, and scientific AI. Each stop changed the problems I could solve.</p></div>
+        <div class="section-head"><div><span class="eyebrow light-eyebrow">The journey</span><h2 id="journey-heading">A career built across disciplines.</h2></div><p class="section-note">Biomedical engineering, clinical data, and enterprise AI shaped the way I build systems for scientists and healthcare teams.</p></div>
         <div class="route" aria-label="Career and education roadmap">
           <svg class="route-road" viewBox="0 0 1100 850" preserveAspectRatio="none" aria-hidden="true"><path class="road-edge" d="M510 -50 C635 85 480 95 565 210 S640 350 530 410 S470 555 590 620 S645 780 500 900"/><path class="road-body" d="M510 -50 C635 85 480 95 565 210 S640 350 530 410 S470 555 590 620 S645 780 500 900"/><path class="road-mid" d="M510 -50 C635 85 480 95 565 210 S640 350 530 410 S470 555 590 620 S645 780 500 900"/></svg>
           <div class="route-stop"><span class="pin" aria-hidden="true"><b>05</b></span><span class="route-date">2022 — Present · North Chicago</span><h3>Applied AI in science</h3><strong>AbbVie</strong><p>Building usable systems for scientific queries, document intelligence, vision, and data access.</p></div>
@@ -373,38 +458,38 @@
           <div class="route-stop"><span class="pin" aria-hidden="true"><b>03</b></span><span class="route-date">Education · Texas Tech University</span><h3>M.S. in Data Science</h3><strong>Technical foundation</strong><p>Connected statistical reasoning and machine learning to practical data systems.</p></div>
           <div class="route-stop"><span class="pin" aria-hidden="true"><b>02</b></span><span class="route-date">2019 — 2021 · Mumbai</span><h3>Clinical analytics</h3><strong>Terna Hospital and Research Center</strong><p>Worked with anesthesiologists on a decision support pilot using clinical data.</p></div>
           <div class="route-stop"><span class="pin" aria-hidden="true"><b>01</b></span><span class="route-date">2018 — 2019 · Pune</span><h3>Biomedical beginnings</h3><strong>Four Eyes Research Center</strong><p>Brought sensors, software, and healthcare research together in practical prototypes.</p></div>
-          <span class="route-caption">Follow the path · 01 → 05</span>
+          <span class="route-caption">Career progression · 2018 to present</span>
         </div>
       </div>
     </section>
-    <section class="section about-band" id="about" aria-labelledby="about-heading"><div class="wrap about-layout"><div><span class="eyebrow light-eyebrow">About</span><h2 id="about-heading">I connect the model to the workflow.</h2><p>I’m a Data Scientist at AbbVie working across applied AI, machine learning, and scientific data systems. My work begins with the decisions people need to make, then moves through data quality, model design, evaluation, and adoption.</p><p>I bring more than eight years of data science and engineering experience across enterprise science and healthcare. I enjoy the parts of a project that sit between disciplines: translating a research need into a usable system, choosing a sound technical approach, and working with domain experts to make the result useful.</p></div><aside class="approach-map" aria-label="People, data, and systems come together to support better decisions"><svg viewBox="0 0 370 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><defs><linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EEA1D9"/><stop offset="1" stop-color="#7E39B3"/></linearGradient></defs><path d="M185 69L73 187M185 69L297 187M73 187H297" stroke="#BD84CE" stroke-width="2" stroke-dasharray="6 7"/><g class="approach-node"><circle cx="185" cy="64" r="47" fill="#F0C9E7" stroke="#B45FC1"/><text x="185" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#54227B">People</text></g><g class="approach-node"><circle cx="75" cy="189" r="47" fill="#E9D8F6" stroke="#9E62C4"/><text x="75" y="195" text-anchor="middle" font-size="16" font-weight="700" fill="#54227B">Data</text></g><g class="approach-node"><circle cx="295" cy="189" r="47" fill="#F5D7E9" stroke="#B45FC1"/><text x="295" y="195" text-anchor="middle" font-size="16" font-weight="700" fill="#54227B">Systems</text></g><circle cx="185" cy="164" r="40" fill="url(#m)"/><text x="185" y="159" text-anchor="middle" font-size="12" font-weight="700" fill="white">Useful</text><text x="185" y="175" text-anchor="middle" font-size="12" font-weight="700" fill="white">decisions</text><path d="M110 266H260" stroke="#D7B4E3" stroke-width="2" stroke-linecap="round"/><text x="185" y="285" text-anchor="middle" font-size="12" font-weight="650" fill="#784291">How I approach applied AI</text></svg></aside></div></section>
+    <section class="section about-band" id="about" aria-labelledby="about-heading"><div class="wrap about-layout"><div><span class="eyebrow light-eyebrow">About</span><h2 id="about-heading">I connect the model to the workflow.</h2><p>I’m a Data Scientist at AbbVie working across applied AI, machine learning, and scientific data systems. My work begins with the decisions people need to make, then moves through data quality, model design, evaluation, and adoption.</p><p>I bring more than eight years of data science and engineering experience across enterprise science and healthcare. I enjoy the parts of a project that sit between disciplines: translating a research need into a usable system, choosing a sound technical approach, and working with domain experts to make the result useful.</p></div><aside class="principles" aria-label="How I approach applied AI"><span class="lab-label">Working principles</span><h3>From research question to useful system.</h3><div><span>01</span><p><strong>Understand the decision.</strong> Identify what scientists need to know and where existing workflows slow them down.</p></div><div><span>02</span><p><strong>Design for trust.</strong> Ground outputs in source data, make assumptions visible, and include appropriate review.</p></div><div><span>03</span><p><strong>Measure the change.</strong> Evaluate both technical quality and the time or effort the workflow saves.</p></div></aside></div></section>
     <section class="section" id="expertise" aria-labelledby="expertise-heading"><div class="wrap"><div class="section-head"><div><span class="eyebrow light-eyebrow">Expertise</span><h2 id="expertise-heading">Tools follow the problem.</h2></div><p class="section-note">Technical depth across model development, data systems, and the path from prototype to practical use.</p></div><div class="capability-grid"><div class="capability"><h3>Generative AI</h3><p>NL2SQL, retrieval-augmented generation, knowledge graphs, document AI, LLM evaluation and guardrails.</p></div><div class="capability"><h3>Machine learning</h3><p>PyTorch, scikit-learn, XGBoost, statistical evaluation, supervised learning and feature design.</p></div><div class="capability"><h3>Computer vision</h3><p>YOLOv8, ResNet50, OpenCV, multi-label classification, video and scientific imagery.</p></div><div class="capability"><h3>Data platforms</h3><p>Python, SQL, Apache Airflow, FastAPI, Amazon S3, SageMaker, Spark SQL and CML.</p></div></div><div class="credentials"><div class="credential"><strong>M.S. Data Science</strong><span>Texas Tech University</span></div><div class="credential"><strong>AWS Certified AI Practitioner</strong><span>Amazon Web Services</span></div></div></div></section>
     <section class="contact" id="contact" aria-labelledby="contact-heading"><div class="wrap contact-layout"><div><span class="eyebrow">Connect</span><h2 id="contact-heading">Let’s build what matters.</h2><p>I’m interested in senior data science and applied AI/ML opportunities where strong technical work meets real user and business needs.</p></div><div class="actions"><a class="button button-primary" href="mailto:parabmamataanil@gmail.com">Email Mamata ↗</a><a class="button button-outline" href="https://github.com/mamata-parab" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
     <script>
-      const sampleViews = {
-        query: {title:'Sample query task mix', bars:[['Schema lookup',78],['Join reasoning',62],['Clarification',45],['Result review',88]]},
-        document: {title:'Sample extraction task mix', bars:[['Table location',84],['Field capture',72],['Unit checks',56],['Review queue',38]]},
-        vision: {title:'Sample image task mix', bars:[['Usable frames',76],['Eye region',68],['Ear position',54],['Expert review',82]]}
+      const measuredViews = {
+        archive: { title:'Transfer time per 10 experiments', bars:[['Before','15 min',100],['After','7–8 min',50]], note:'Approx. 15 minutes before; 7–8 minutes after migration to the archive workflow.' },
+        pipeline: { title:'Scheduled workflow runtime', bars:[['Before','90 min',100],['After','17 min',19]], note:'A separate migration of 108 legacy workflows to scheduled Python jobs reduced runtime from 90 to 17 minutes.' }
       };
       const plot = document.querySelector('#plot-bars');
       const controls = document.querySelectorAll('.lab-controls button');
-      function renderSample(view) {
-        const current = sampleViews[view];
+      function renderMeasure(view) {
+        const current = measuredViews[view];
         document.querySelector('#plot-title').textContent = current.title;
+        document.querySelector('#plot-note').textContent = current.note;
         plot.replaceChildren();
-        current.bars.forEach(([label,value]) => {
+        current.bars.forEach(([label,value,width]) => {
           const row = document.createElement('div'); row.className='bar-row';
           const name = document.createElement('span'); name.textContent=label;
           const track = document.createElement('div'); track.className='bar-track';
-          const fill = document.createElement('i'); fill.className='bar-fill'; fill.style.setProperty('--value',value+'%'); track.append(fill);
-          const number = document.createElement('b'); number.textContent=value+'%';
+          const fill = document.createElement('i'); fill.className='bar-fill'; fill.style.setProperty('--value',width+'%'); track.append(fill);
+          const number = document.createElement('b'); number.textContent=value;
           row.append(name,track,number); plot.append(row);
         });
-        plot.setAttribute('aria-label',current.title+' — sample data, '+current.bars.map(([name,value])=>name+' '+value+' percent').join(', '));
+        plot.setAttribute('aria-label',current.title+': '+current.bars.map(([name,value])=>name+' '+value).join(', '));
         controls.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.view===view)));
       }
-      controls.forEach(button => button.addEventListener('click',() => renderSample(button.dataset.view)));
-      renderSample('query');
+      controls.forEach(button => button.addEventListener('click',() => renderMeasure(button.dataset.view)));
+      renderMeasure('archive');
     </script>
   </main>
   <footer><div class="wrap footer-inner"><span>© 2026 Mamata Parab</span><span>Built with intention. <a href="https://www.linkedin.com/in/mamata-parab/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></div></footer>
