@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <title>Mamata Parab | Data Scientist & Applied AI/ML Engineer</title>
   <style>
-    :root { --ink:#221b32; --muted:#665f73; --line:#e7e1ed; --paper:#fcfafc; --surface:#fff; --violet:#6d39d1; --violet-dark:#42227d; --navy:#211344; --orchid:#b455e9; --max:1120px; }
+    :root { --ink:#281c35; --muted:#665f73; --line:#e9daee; --paper:#fffafd; --surface:#fff; --violet:#7434bd; --violet-dark:#50227f; --navy:#241346; --orchid:#db74d6; --max:1120px; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
@@ -28,9 +28,11 @@
     .nav a { text-decoration:none; font-size:.9rem; font-weight:620; color:#51485f; }
     .nav a:hover { color:var(--violet); }
     .nav .nav-contact { padding:9px 16px; border:1px solid #cfc2e3; border-radius:999px; color:var(--violet-dark); }
-    .hero { position:relative; isolation:isolate; overflow:hidden; background:radial-gradient(circle at 73% 14%,rgba(148,62,232,.5),transparent 28%),radial-gradient(circle at 12% 8%,rgba(119,38,217,.42),transparent 36%),linear-gradient(118deg,#321661 0%,#211344 48%,#160f36 100%); color:#fff; }
+    .hero { position:relative; isolation:isolate; overflow:hidden; background:linear-gradient(116deg,#261243 0%,#64289b 38%,#b54bc5 72%,#ed9dd8 100%); background-size:180% 180%; animation:aurora 18s ease-in-out infinite alternate; color:#fff; }
+    @keyframes aurora { 0% { background-position:0% 50%; } 100% { background-position:100% 45%; } }
     .hero::before { content:""; position:absolute; inset:0; z-index:-1; opacity:.18; background-image:linear-gradient(rgba(255,255,255,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.2) 1px,transparent 1px); background-size:72px 72px; mask-image:linear-gradient(to right,transparent 33%,#000); }
-    .hero::after { content:""; position:absolute; width:500px; height:500px; right:-180px; bottom:-370px; border:1px solid rgba(210,131,255,.5); border-radius:50%; box-shadow:0 0 0 50px rgba(176,83,242,.06),0 0 0 120px rgba(176,83,242,.04); z-index:-1; }
+    .hero::after { content:""; position:absolute; width:580px; height:580px; right:-140px; bottom:-340px; border:1px solid rgba(255,221,249,.58); border-radius:42% 58% 63% 37%; box-shadow:0 0 0 50px rgba(255,197,246,.08),0 0 0 120px rgba(225,127,226,.08); z-index:-1; animation:drift 16s ease-in-out infinite alternate; }
+    @keyframes drift { to { transform:translate(-55px,-45px) rotate(25deg) scale(1.12); } }
     .hero-inner { min-height:565px; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr); align-items:center; gap:52px; padding-block:84px 104px; }
     .eyebrow { display:inline-flex; gap:8px; align-items:center; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:750; }
     .hero .eyebrow { color:#d5b0ff; }
@@ -42,13 +44,16 @@
     .hero-copy { max-width:610px; color:#e4dced; font-size:1.08rem; line-height:1.75; }
     .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
     .button { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:47px; padding:10px 20px; border-radius:9px; text-decoration:none; font-size:.94rem; font-weight:710; transition:transform .2s ease,background .2s ease,box-shadow .2s ease; }
-    .button:hover { transform:translateY(-2px); }
-    .button-primary { background:#fff; color:#3b1b72; box-shadow:0 10px 30px rgba(12,4,31,.17); }
+    .button:hover { transform:translateY(-3px); box-shadow:0 14px 30px rgba(44,15,76,.24); }
+    .button:active { transform:translateY(1px) scale(.96); }
+    .button-primary { background:linear-gradient(110deg,#f9bcdf,#df8ee6 45%,#bd71de); color:#301947; box-shadow:0 10px 30px rgba(72,19,91,.19); }
     .button-outline { border:1px solid rgba(255,255,255,.48); color:#fff; }
     .portrait { justify-self:center; width:min(100%,290px); aspect-ratio:1; display:grid; place-items:center; position:relative; }
-    .portrait::before { content:""; position:absolute; inset:0; border:1px solid rgba(220,168,255,.53); border-radius:43% 57% 59% 41% / 47% 44% 56% 53%; transform:rotate(-11deg); box-shadow:0 0 48px rgba(179,80,239,.18); }
+    .portrait::before { content:""; position:absolute; inset:0; border:1px solid rgba(255,226,252,.7); border-radius:43% 57% 59% 41% / 47% 44% 56% 53%; box-shadow:0 0 48px rgba(236,141,227,.4); animation:orbit 12s ease-in-out infinite alternate; }
+    @keyframes orbit { from { transform:rotate(-16deg) scale(.98); } to { transform:rotate(18deg) scale(1.06); } }
     .portrait::after { content:""; position:absolute; inset:18px; border:1px dashed rgba(226,186,252,.4); border-radius:50%; }
-    .portrait-placeholder { position:relative; display:grid; place-items:center; width:72%; aspect-ratio:1; border-radius:50%; background:linear-gradient(145deg,#9d58ed,#482488 65%,#25154c); box-shadow:0 22px 55px rgba(8,2,31,.35),inset 0 1px rgba(255,255,255,.32); font-size:clamp(3rem,6vw,5rem); letter-spacing:-.09em; font-weight:770; padding-right:.08em; }
+    .portrait-placeholder { position:relative; display:grid; place-items:center; width:72%; aspect-ratio:1; border-radius:50%; background:linear-gradient(145deg,#f1a4db,#a954c5 58%,#4b2282); box-shadow:0 22px 55px rgba(54,9,75,.35),inset 0 1px rgba(255,255,255,.5); font-size:clamp(3rem,6vw,5rem); letter-spacing:-.09em; font-weight:770; padding-right:.08em; animation:float-soft 6s ease-in-out infinite; }
+    @keyframes float-soft { 50% { transform:translateY(-10px); } }
     .hero-foot { display:flex; align-items:center; gap:13px; flex-wrap:wrap; margin-top:40px; color:#cbb9df; font-size:.85rem; }
     .hero-foot span+span::before { content:"·"; margin-right:13px; color:#b77eef; }
     section { scroll-margin-top:90px; }
@@ -57,31 +62,44 @@
     .section-head h2 { margin:11px 0 0; font-size:clamp(2.15rem,4.2vw,3.4rem); }
     .section-note { max-width:420px; margin:0 0 4px; color:var(--muted); }
     .light-eyebrow { color:var(--violet); }
-    .intro-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:-35px; position:relative; z-index:1; background:#fff; border:1px solid var(--line); border-radius:17px; box-shadow:0 20px 50px rgba(35,17,71,.08); }
+    .intro-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:-35px; position:relative; z-index:1; background:linear-gradient(120deg,#fff9fc,#fbecfb,#f3e8ff); border:1px solid #e9d2f0; border-radius:17px; box-shadow:0 20px 50px rgba(75,26,99,.12); }
     .intro-item { padding:26px 30px; }
     .intro-item+.intro-item { border-left:1px solid var(--line); }
     .intro-item strong { display:block; font-size:1.56rem; line-height:1.2; color:var(--violet-dark); letter-spacing:-.04em; }
     .intro-item span { display:block; margin-top:5px; font-size:.87rem; color:var(--muted); }
     .work { padding-top:112px; }
-    .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
-    .project { display:flex; flex-direction:column; min-height:390px; padding:30px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:0 9px 30px rgba(40,24,65,.035); transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease; }
-    .project:hover { transform:translateY(-3px); border-color:#d3c1ed; box-shadow:0 18px 40px rgba(49,26,87,.09); }
-    .project.featured { grid-column:span 2; display:grid; grid-template-columns:1.2fr .8fr; gap:40px; min-height:325px; background:linear-gradient(120deg,#2c1858,#472184 72%,#7532b4); border-color:transparent; color:#fff; }
+    .project-grid { display:grid; gap:20px; }
+    .project-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:start; }
+    .project-column { display:grid; gap:20px; align-content:start; min-width:0; }
+    .project { display:flex; flex-direction:column; min-height:390px; padding:30px; border:1px solid transparent; border-radius:18px; background:linear-gradient(145deg,#fffafd,#fdf6ff) padding-box,linear-gradient(135deg,#f5c5e8,#ded0f2) border-box; box-shadow:0 9px 30px rgba(69,26,83,.055); transition:transform .28s ease,box-shadow .28s ease,filter .28s ease; }
+    .project:hover { transform:translateY(-6px); box-shadow:0 22px 48px rgba(99,36,123,.16); }
+    .project:active { transform:translateY(-2px) scale(.99); }
+    .project:has(details[open]) { box-shadow:0 18px 48px rgba(109,43,137,.19); filter:saturate(1.05); }
+    .project.featured { display:grid; grid-template-columns:1.2fr .8fr; gap:40px; min-height:325px; background:linear-gradient(112deg,#351556 0%,#7132a9 50%,#d36ace 100%); background-size:170% 170%; animation:aurora 19s ease-in-out infinite alternate; border-color:transparent; color:#fff; }
     .project-kicker { color:var(--violet); text-transform:uppercase; letter-spacing:.13em; font-size:.73rem; font-weight:790; }
     .featured .project-kicker { color:#dec0ff; }
     .project h3 { margin:14px 0 15px; font-size:clamp(1.55rem,2.5vw,2.3rem); }
+    .project-column .project h3 { min-height:2.25em; }
     .project p { color:var(--muted); margin-bottom:17px; }
+    .project-column .project > p { min-height:8.1em; }
     .featured p { color:#e7dcef; }
     .project-metric { margin-top:auto; padding-top:19px; border-top:1px solid var(--line); font-size:.9rem; font-weight:700; color:var(--violet-dark); }
     .featured .project-metric { border-color:rgba(255,255,255,.24); color:#f2d8ff; }
     .project-side { align-self:center; display:grid; gap:15px; }
     .project-side .big-number { font-size:clamp(3.2rem,6vw,5.5rem); line-height:1; font-weight:790; letter-spacing:-.07em; }
     .project-side small { display:block; max-width:240px; color:#e0cdec; line-height:1.5; font-size:.9rem; }
-    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:5px; }
+    .tags { display:flex; flex-wrap:wrap; align-content:flex-start; gap:7px; margin-top:5px; min-height:30px; }
     .tag { padding:5px 10px; border-radius:999px; background:#f1eafa; color:#5d348f; font-size:.73rem; font-weight:680; }
+    .tag { transition:transform .22s ease,background .22s ease; }
+    .project:hover .tag { background:#f3e1f7; }
+    .tag:hover { transform:translateY(-3px) scale(1.04); }
     .featured .tag { background:rgba(255,255,255,.13); color:#f2e4ff; }
     details { margin-top:18px; }
-    summary { list-style:none; width:max-content; cursor:pointer; font-size:.87rem; font-weight:760; color:var(--violet); }
+    details[open] .detail-body { animation:detail-in .32s ease-out both; }
+    @keyframes detail-in { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
+    summary { list-style:none; width:max-content; cursor:pointer; font-size:.87rem; font-weight:760; color:var(--violet); transition:transform .22s ease,color .22s ease; }
+    summary:hover { color:#a545ba; transform:translateX(4px); }
+    summary:active { transform:translateX(7px) scale(.97); }
     summary::-webkit-details-marker { display:none; }
     summary::after { content:" ↗"; }
     details[open] summary::after { content:" ↑"; }
@@ -90,7 +108,7 @@
     .detail-body p { margin-bottom:10px; }
     .detail-body b { color:var(--ink); }
     .featured .detail-body b { color:#fff; }
-    .about-band { background:#f3eff8; border-block:1px solid #e8def2; }
+    .about-band { background:linear-gradient(115deg,#fff0f8,#f5e9fb 54%,#e9ddf8); border-block:1px solid #ead7ee; }
     .about-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.65fr); gap:75px; align-items:start; }
     .about-layout h2 { font-size:clamp(2.15rem,4vw,3.3rem); margin:13px 0 25px; }
     .about-layout p { color:#51485f; font-size:1.04rem; line-height:1.8; }
@@ -107,7 +125,7 @@
     .credential { padding:20px 24px; border:1px solid var(--line); border-radius:13px; background:#fff; }
     .credential strong { display:block; font-size:.91rem; }
     .credential span { display:block; margin-top:3px; color:var(--muted); font-size:.83rem; }
-    .contact { padding-block:85px; background:radial-gradient(circle at 85% 0%,#7040b7,transparent 36%),linear-gradient(120deg,#211344,#321863); color:#fff; }
+    .contact { padding-block:85px; background:linear-gradient(115deg,#2c144e,#7933a7 55%,#cc66c7); background-size:170% 170%; animation:aurora 20s ease-in-out infinite alternate; color:#fff; }
     .contact-layout { display:flex; align-items:end; justify-content:space-between; gap:30px; }
     .contact h2 { margin:14px 0; font-size:clamp(2.2rem,4.5vw,3.8rem); }
     .contact p { max-width:640px; margin:0; color:#e0d4ed; }
@@ -134,10 +152,11 @@
       .work { padding-top:82px; }
       .section-head { display:block; }
       .section-note { margin-top:14px; }
-      .project-grid,.about-layout,.credentials { grid-template-columns:1fr; }
-      .project.featured { grid-column:auto; display:flex; min-height:auto; }
+      .project-columns,.about-layout,.credentials { grid-template-columns:1fr; }
+      .project.featured { display:flex; min-height:auto; }
       .project-side { display:none; }
       .project { min-height:auto; padding:24px; }
+      .project-column .project h3,.project-column .project > p { min-height:0; }
       .capability-grid { grid-template-columns:1fr 1fr; gap:10px; }
       .capability { padding:18px; }
       .contact-layout { align-items:start; flex-direction:column; }
@@ -183,11 +202,17 @@
             <div><span class="project-kicker">01 / Generative AI · Data access</span><h3>Natural-language access to scientific data</h3><p>Designed an NL2SQL system for scientists who need answers across complex databases without writing SQL. The workflow grounds requests in schema metadata and domain concepts, then checks generated queries before execution.</p><div class="tags"><span class="tag">NL2SQL</span><span class="tag">Metadata retrieval</span><span class="tag">SQL guardrails</span></div><div class="project-metric">60% faster data retrieval turnaround · &gt;47% direct execution accuracy on zero-shot domain queries</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Finding the right tables, fields, and joins across scientific data systems took specialist support.</p><p><b>Decision.</b> I separated intent understanding, schema selection, SQL generation, and safe execution. Domain metadata and relationships supplied the context; validation and clarification handled unsafe or ambiguous requests.</p><p><b>Outcome.</b> The system was designed for 1,000+ scientists and achieved a 3.5× lift in direct execution accuracy over baseline prompting in the measured zero-shot evaluation.</p></div></details></div>
             <div class="project-side" aria-hidden="true"><div class="big-number">60%</div><small>less turnaround time for cross-team scientific data retrieval</small></div>
           </article>
-          <article class="project"><span class="project-kicker">02 / Document AI</span><h3>Clinical data extraction at scale</h3><p>Modernized extraction of pharmacokinetic parameters from long, inconsistent clinical study reports using document structure, targeted retrieval, and an internal LLM service.</p><div class="tags"><span class="tag">Document AI</span><span class="tag">LLMs</span><span class="tag">Information extraction</span></div><div class="project-metric">800+ reports · &gt;65% faster processing · 96% extraction accuracy</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Manually locating and transcribing PK summary tables was slow and difficult to scale.</p><p><b>Decision.</b> The workflow used document structure to narrow where to look, then extracted and checked fields such as Cmax and AUC with AbbVie's internal LLM API.</p><p><b>Outcome.</b> It created a reusable route from complex reports to structured data for downstream analysis.</p></div></details></article>
-          <article class="project"><span class="project-kicker">03 / Knowledge systems</span><h3>Connecting evidence across patents</h3><p>Built a graph-based patent intelligence workflow to surface compounds, targets, and patent families across lengthy documents, with hybrid retrieval for related evidence.</p><div class="tags"><span class="tag">Knowledge graphs</span><span class="tag">Entity resolution</span><span class="tag">RAG</span></div><div class="project-metric">40% shorter patent analysis cycles</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Important relationships were scattered across long patent documents and multiple patent families.</p><p><b>Decision.</b> The workflow combined OCR and chunking, structured LLM extraction, canonical entity resolution, and graph relationships with vector-based retrieval.</p><p><b>Outcome.</b> Researchers could trace connected information across documents more efficiently.</p></div></details></article>
-          <article class="project"><span class="project-kicker">04 / Computer vision</span><h3>Reducing manual video review</h3><p>Initiated a two-stage approach to Rat Grimace Scoring: select usable facial frames from study video, then support expert assessment using annotated eyes, ears, nose, and whiskers.</p><div class="tags"><span class="tag">YOLOv8</span><span class="tag">Video</span><span class="tag">Expert validation</span></div><div class="project-metric">67% less manual video review time for usable frames</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Scientists spent substantial time finding clear facial frames before scoring could begin.</p><p><b>Decision.</b> The first model selected frames suitable for review. A separate scoring workflow used expert labels and facial feature annotations, keeping scientists involved in validation.</p><p><b>Outcome.</b> Frame selection reduced the manual search effort while preserving expert judgment in the scoring process.</p></div></details></article>
-          <article class="project"><span class="project-kicker">05 / Data engineering · Cloud</span><h3>A searchable archive for structural biology</h3><p>Migrated historical X-ray crystallography experiments from on-premises storage to Amazon S3, joining archived files to metadata so scientists could retrieve past work.</p><div class="tags"><span class="tag">Airflow</span><span class="tag">FastAPI</span><span class="tag">Amazon S3</span></div><div class="project-metric">20,000 experiment folders · 57% lower storage costs</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> An expensive legacy store held experiments across three historical folder conventions, with limited ways to find archived work.</p><p><b>Decision.</b> Airflow orchestrated discovery and transfer, idempotency checks prevented duplicates, and a FastAPI service linked S3 locations to scientific metadata.</p><p><b>Outcome.</b> Average transfer cycles fell from about 15 to 7–8 minutes while archived experiments became easier to locate.</p></div></details></article>
-          <article class="project"><span class="project-kicker">06 / Visual quality control</span><h3>Detecting rare image defects</h3><p>Built a multi-label defect detection approach for high-throughput microscope imagery, accounting for rare categories and the cost of missing defects.</p><div class="tags"><span class="tag">ResNet50</span><span class="tag">Multi-label classification</span><span class="tag">Evaluation</span></div><div class="project-metric">60,000+ training images · 0.87 weighted recall · &gt;0.88 F1 on core categories</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Some important defect classes were far less common than others.</p><p><b>Decision.</b> The team evaluated class-aware models and prioritized recall, so the screening approach would flag likely defects for review.</p><p><b>Outcome.</b> The hackathon solution demonstrated strong performance across the core categories during evaluation.</p></div></details></article>
+          <div class="project-columns">
+            <div class="project-column">
+              <article class="project"><span class="project-kicker">02 / Document AI</span><h3>Clinical data extraction at scale</h3><p>Modernized extraction of pharmacokinetic parameters from long, inconsistent clinical study reports using document structure, targeted retrieval, and an internal LLM service.</p><div class="tags"><span class="tag">Document AI</span><span class="tag">LLMs</span><span class="tag">Information extraction</span></div><div class="project-metric">800+ reports · &gt;65% faster processing · 96% extraction accuracy</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Manually locating and transcribing PK summary tables was slow and difficult to scale.</p><p><b>Decision.</b> The workflow used document structure to narrow where to look, then extracted and checked fields such as Cmax and AUC with AbbVie's internal LLM API.</p><p><b>Outcome.</b> It created a reusable route from complex reports to structured data for downstream analysis.</p></div></details></article>
+              <article class="project"><span class="project-kicker">04 / Computer vision</span><h3>Reducing manual video review</h3><p>Initiated a two-stage approach to Rat Grimace Scoring: select usable facial frames from study video, then support expert assessment using annotated eyes, ears, nose, and whiskers.</p><div class="tags"><span class="tag">YOLOv8</span><span class="tag">Video</span><span class="tag">Expert validation</span></div><div class="project-metric">67% less manual video review time for usable frames</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Scientists spent substantial time finding clear facial frames before scoring could begin.</p><p><b>Decision.</b> The first model selected frames suitable for review. A separate scoring workflow used expert labels and facial feature annotations, keeping scientists involved in validation.</p><p><b>Outcome.</b> Frame selection reduced the manual search effort while preserving expert judgment in the scoring process.</p></div></details></article>
+              <article class="project"><span class="project-kicker">06 / Visual quality control</span><h3>Detecting rare image defects</h3><p>Built a multi-label defect detection approach for high-throughput microscope imagery, accounting for rare categories and the cost of missing defects.</p><div class="tags"><span class="tag">ResNet50</span><span class="tag">Multi-label classification</span><span class="tag">Evaluation</span></div><div class="project-metric">60,000+ training images · 0.87 weighted recall · &gt;0.88 F1 on core categories</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Some important defect classes were far less common than others.</p><p><b>Decision.</b> The team evaluated class-aware models and prioritized recall, so the screening approach would flag likely defects for review.</p><p><b>Outcome.</b> The hackathon solution demonstrated strong performance across the core categories during evaluation.</p></div></details></article>
+            </div>
+            <div class="project-column">
+              <article class="project"><span class="project-kicker">03 / Knowledge systems</span><h3>Connecting evidence across patents</h3><p>Built a graph-based patent intelligence workflow to surface compounds, targets, and patent families across lengthy documents, with hybrid retrieval for related evidence.</p><div class="tags"><span class="tag">Knowledge graphs</span><span class="tag">Entity resolution</span><span class="tag">RAG</span></div><div class="project-metric">40% shorter patent analysis cycles</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> Important relationships were scattered across long patent documents and multiple patent families.</p><p><b>Decision.</b> The workflow combined OCR and chunking, structured LLM extraction, canonical entity resolution, and graph relationships with vector-based retrieval.</p><p><b>Outcome.</b> Researchers could trace connected information across documents more efficiently.</p></div></details></article>
+              <article class="project"><span class="project-kicker">05 / Data engineering · Cloud</span><h3>A searchable archive for structural biology</h3><p>Migrated historical X-ray crystallography experiments from on-premises storage to Amazon S3, joining archived files to metadata so scientists could retrieve past work.</p><div class="tags"><span class="tag">Airflow</span><span class="tag">FastAPI</span><span class="tag">Amazon S3</span></div><div class="project-metric">20,000 experiment folders · 57% lower storage costs</div><details><summary>Read the approach</summary><div class="detail-body"><p><b>Problem.</b> An expensive legacy store held experiments across three historical folder conventions, with limited ways to find archived work.</p><p><b>Decision.</b> Airflow orchestrated discovery and transfer, idempotency checks prevented duplicates, and a FastAPI service linked S3 locations to scientific metadata.</p><p><b>Outcome.</b> Average transfer cycles fell from about 15 to 7–8 minutes while archived experiments became easier to locate.</p></div></details></article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
